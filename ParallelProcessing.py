@@ -15,7 +15,7 @@ os.environ["HDF5_PLUGIN_PATH"] = plugin_dir
 os.system("echo 'Test if the HDF5_PLUGIN_PATH is set:' $(env | grep HDF5)")
 ##### 
 
-import h5py
+
 from tqdm import tqdm
 from multiprocessing import Process
 import zmq
