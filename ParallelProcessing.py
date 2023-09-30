@@ -193,7 +193,8 @@ class DataWriter():
         if not os.path.exists(self._output_path):
             raise FileNotFoundError(f'{self._output_path} does not exist.')      
         
-        output_file_path = os.path.join(self._output_path, f'{self._scan.name}_{self._fsuffix}.h5')
+        #output_file_path = os.path.join(self._output_path, f'{self._scan.name}_{self._fsuffix}.h5')
+        output_file_path = os.path.join(self._output_path, f'{os.path.splitext(os.path.basename(self._fname))[0]}_{self._scan.name}_{self._fsuffix}.h5')
         if os.path.isfile(output_file_path):
             raise FileExistsError(f'{output_file_path} already exists.')      
         
@@ -203,7 +204,7 @@ class DataWriter():
            
     def __enter__(self): 
         self._file_checks()
-        self._output_fname= f'{self._scan.name}_{self._fsuffix}.h5'
+        self._output_fname= f'{os.path.splitext(os.path.basename(self._fname))[0]}_{self._scan.name}_{self._fsuffix}.h5'
         self._output_abs_fname= os.path.join(self._output_path, self._output_fname)
         
         self._initialize_file()
@@ -514,7 +515,8 @@ class ParallelProcessing:
         for i in range(self._nworkers):
             procs[i].join()
         
-        
+"""
+     
 def main():
     nworkers = 20
 
@@ -537,6 +539,7 @@ def main():
             p=ParallelProcessing(nworkers,integrator, esrfdata, datawriter) 
             p.execute_processing()
 
+"""   
 
 if __name__ == '__main__':  
     main()
