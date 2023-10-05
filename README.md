@@ -1,1 +1,8 @@
-# project_nxs
+# Project NXS – A comprehensive framework for analyzing multimodal synchrotron data on heterogeneous biomaterials in 2D and 3D
+
+Synchrotron-based scanning X-ray scattering and diffraction (SAXS, WAXS, XRD) in 2D and 3D in combination with X-ray fluorescence (XRF) with a nano- or micro-focus beam have emerged as techniques to study such highly inhomogeneous biomaterials. More and more scattering beamlines offer these multimodal imaging capabilities simultaneously, but not necessarily with a data reduction and analysis pipeline in place. While the experimental data is saved as HDF5, the internal data structure of a single HDF5 file and the overall data organization are often very different between various synchrotrons. Additionally, a single sample scan produces a data set in the order of hundreds of gigabytes and a single experiment data in the order of terabytes. Consequently, non-regular synchrotron users struggle with the data reduction, analysis, and visualization of their experiments.
+
+Addressing these challenges, Project NXS aims to provide a comprehensive framework for data reduction, analysis, and visualization specifically designed for multimodal synchrotron experiments on spatially variable biomaterials. As hard coatings in machining cutting tools have similiar characteristics, they present another use case. 
+Implemented in Python, this framework leverages existing Python packages such as pyFAI (https://github.com/silx-kit/pyFAI) and azint (https://github.com/maxiv-science/azint). Thanks to its modular structure, Project NXS can handle data from different synchrotrons and can be easily extended to accommodate the unique characteristics of various sample systems.
+
+Current status: Under development. 
