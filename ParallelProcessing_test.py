@@ -8,6 +8,8 @@ class TestScan:
     def test_mask(self):
         assert isinstance(self.scan.mask, np.ndarray)
         assert self.scan.mask.ndim==2
+        assert self.scan.mask.shape == (2167, 2070)
+        assert self.scan.mask.dtype == np.dtype('uint8')
         
     
 
