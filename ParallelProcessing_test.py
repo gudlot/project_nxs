@@ -13,7 +13,6 @@ class Sample_scan_string:
         
     
 
-# Pytest tests
 def test_azint_config_creation():
     # Sample values
     sample_scan = Scan(name="Sample_scan_string", poni_file="./test_data/calib.poni", mask_file="./test_data/mask.npy")
